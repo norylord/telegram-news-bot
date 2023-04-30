@@ -20,7 +20,6 @@ const getNewsTopHeadlines = async (q) => {
 bot.on('message',  async (msg) => {
     const chatId = msg.chat.id;
     console.log(msg.text)
-    bot.sendMessage(chatId, 'Нихуя че захотел, пашел нахуй');
     try {
         const results = await getNewsTopHeadlines(msg.text)
         results.articles.map((news) => {
